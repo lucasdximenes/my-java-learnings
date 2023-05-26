@@ -79,5 +79,43 @@ public class SomeStringFunctions {
         * [Hello, World!]
         * [Apple, Banana, Grapes]
         * */
+
+        /*
+        * StringBuilder:
+        * StringBuilder() -> create a new StringBuilder
+        * append() -> add a new string to StringBuilder
+        * reverse() -> reverse the string
+        * toString() -> convert StringBuilder to String (to print for example)
+        * */
+
+        // EX's:
+        StringBuilder sb = new StringBuilder();
+        sb.append("Hello");
+        sb.append(" World!");
+        System.out.println(sb.toString());
+        // In this case StringBuilder is simply a String
+        // But in complex cases, StringBuilder is more efficient than String concatenation
+        // For example:
+        String fruits2 = "";
+        fruits2 += "Apple";
+        fruits2 += " Banana";
+        fruits2 += " Grapes";
+        System.out.println(fruits2);
+        // In this case, String concatenation is more expensive than StringBuilder
+        // Because String concatenation create a new String every time
+        // But StringBuilder is mutable, so it's more efficient
+
+        /*
+        * In cases where you need to concatenate a lot of strings, use StringBuilder
+        * In cases where you need to concatenate a few strings, use String concatenation
+        *
+        * Other complex cases is when you need to concatenate a lot of strings in a loop
+        * In this case, use StringBuilder
+        * for (comment c : comments) {
+        *  sb.append(c + "\n"
+        * }
+        * return sb.toString(); // return a String with all comments
+        * */
+        // ===========================================================
     }
 }
